@@ -15,15 +15,24 @@ import numpy as np
 # print(type(arr))
 
 
-array = np.array([[["A","b","c"], ["d","e","f"], ["i","j","k"]],
-                  [["k","l","m"], ["n","o","p"], ["q","r","s"]],
-                  [["t","u","v"], ["w","x","y"], ["z","o","g"]]])
-# print(array.ndim)  # ndim - attribute calcluates no of dimension of arr
-# print(array.shape) # shape - attribute It calculates the number of rows, columns, and number of layers in an array. 
+# array = np.array([[["A","b","c"], ["d","e","f"], ["i","j","k"]],
+#                   [["k","l","m"], ["n","o","p"], ["q","r","s"]],
+#                   [["t","u","v"], ["w","x","y"], ["z","o","g"]]])
+# # print(array.ndim)  # ndim - attribute calcluates no of dimension of arr
+# # print(array.shape) # shape - attribute It calculates the number of rows, columns, and number of layers in an array. 
 
 
-# chain indexing - A multi-dimensional indexing (arr[layer_no,row_no,column_no])
-print(array[1,1,0])
+# # chain indexing - A multi-dimensional indexing (arr[layer_no,row_no,column_no])
+# print(array[1,1,0])
 
-master =array[2,1,2] +  array[2,0,1] + array[2,0,2] + array[1,2,1] + array[0,0,0] + array[0,2,1]
-print(master)
+# master =array[2,1,2] +  array[2,0,1] + array[2,0,2] + array[1,2,1] + array[0,0,0] + array[0,2,1]
+# print(master)
+
+# slicing - arr[start:end:steps]
+
+uv =np.array([[1,2,3],
+              [1,1,2],
+              [4,5,6],
+              [7,8,9]])
+
+print(uv[0:4,::2])  # for column like indexing we arr[:, indexing]
