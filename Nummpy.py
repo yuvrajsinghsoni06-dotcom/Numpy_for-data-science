@@ -30,9 +30,50 @@ import numpy as np
 
 # slicing - arr[start:end:steps]
 
-uv =np.array([[1,2,3],
-              [1,1,2],
-              [4,5,6],
-              [7,8,9]])
+# uv =np.array([[1,2,3],
+#               [1,1,2],
+#               [4,5,6],
+#               [7,8,9]])
 
-print(uv[2:,1:])  # for column like indexing we arr[:, indexing]
+# print(uv[2:,1:])  # for column like indexing we arr[:, indexing]
+
+
+#scalar arthimthics -- 
+
+
+# arr = np.array([1,2,3])
+
+# # print(arr  + 2)
+# # print(arr - 2)
+# # print(arr  * 2)
+# # print(arr   /  2)
+# # print(arr   //  2)
+# # print(arr   **  2)
+
+# # vectororization math func-- applies a function to a array without writing the loop
+
+# # print(np.sqrt(arr))
+# # print(np.round(arr))
+# # print(np.floor(arr))  # floor - for rounding down of ele
+# # print(np.ceil(arr))  # ceil - for round up of ele
+
+# area = np.pi * (arr ** 2)
+# print(area)
+
+# element wise arthimathic
+
+# arr1 = np.array([1,2,3])
+# arr2 = np.array([4,5,6])
+
+# print(arr1 + arr2)
+# print(arr1 - arr2)
+# print(arr1 * arr2)
+# print(arr1 / arr2)
+# print(arr1 ** arr2)
+
+# Comparison Operators -  returns a boolen outputs
+
+score = np.array([91,100,55,73,83,64])
+
+score[score < 80] = 0
+print(score)
