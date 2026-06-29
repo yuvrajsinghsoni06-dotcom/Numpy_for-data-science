@@ -73,7 +73,22 @@ import numpy as np
 
 # Comparison Operators -  returns a boolen outputs
 
-score = np.array([91,100,55,73,83,64])
+# score = np.array([91,100,55,73,83,64])
 
-score[score < 80] = 0
-print(score)
+# score[score < 80] = 0
+# print(score)
+
+
+""" broadcasting - It allows NumPy to perform operations on arrays with different shapes by virtually expanding dimensions so they match the dimensions of a larger array. For broadcasting to act on an array, they have the following descriptions:
+- Dimensions have the same size.
+- One dimension must be the same, or one of the dimensions must be one for both the array.
+That allows to perform element-wise operations like addition, subtraction, and element-wise multiplication on arrays of different sizes. It doesn't perform a dot product. Instead, it virtually stretches the smaller array to match the shape of the larger set, so the operation can be applied to the corresponding elements. 
+"""
+
+arr1 =np.array([[1,2,3,4]])
+arr2 = np.array([[1],[2],[3],[4]])
+
+print(np.shape(arr1))
+print(np.shape(arr2))
+
+print(arr1 + arr2)
