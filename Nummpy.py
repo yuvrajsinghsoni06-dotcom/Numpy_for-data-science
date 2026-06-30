@@ -94,12 +94,37 @@ import numpy as np
 # print(arr1 + arr2)
 
 
-array1 = np.array([[1,2,9,3,4,5,6,7,8]])
-array2 = np.array([[1],[2],[9],[3],[4],[5],[6],[7],[8]])
+# array1 = np.array([[1,2,9,3,4,5,6,7,8]])
+# array2 = np.array([[1],[2],[9],[3],[4],[5],[6],[7],[8]])
 
-print(np.shape(array1))
-print(np.shape(array2))
+# print(np.shape(array1))
+# print(np.shape(array2))
 
-print(array1 * array2)
+# print(array1 * array2)
 
 
+# Aggregate function - Summarize data and typically returns are at a single value.  Basically utilizes certain built-in functions such as:
+# - Sum of all element
+# - mean
+# - standard deviation
+# - variance
+# - min
+# - max 
+# include axis arg to specfy the method call when 0 will applied to column , when 1 applied to rows.
+
+
+array = np.array([[1,2,3,4,5],
+                  [6,7,8,9,10]])
+
+# print(np.sum(array))
+# print(np.mean(array))  # This is the mean of the array. 
+# print(np.std(array))   # Standard deviation of array 
+# print(np.var(array))  # Returns variants of an array. 
+# print(np.max(array))   
+# print(np.min(array))
+# print(np.argmax(array))  # Returns the index position of the  max ele 
+# print(np.argmin(array))  # Returns the index position of the  min ele
+
+
+
+print(np.sum(array, axis =1))
