@@ -79,16 +79,27 @@ import numpy as np
 # print(score)
 
 
-""" broadcasting - It allows NumPy to perform operations on arrays with different shapes by virtually expanding dimensions so they match the dimensions of a larger array. For broadcasting to act on an array, they have the following descriptions:
-- Dimensions have the same size.
-- One dimension must be the same, or one of the dimensions must be one for both the array.
-That allows to perform element-wise operations like addition, subtraction, and element-wise multiplication on arrays of different sizes. It doesn't perform a dot product. Instead, it virtually stretches the smaller array to match the shape of the larger set, so the operation can be applied to the corresponding elements. 
-"""
+# """ broadcasting - It allows NumPy to perform operations on arrays with different shapes by virtually expanding dimensions so they match the dimensions of a larger array. For broadcasting to act on an array, they have the following descriptions:
+# - Dimensions have the same size.
+# - One dimension must be the same, or one of the dimensions must be one for both the array.
+# That allows to perform element-wise operations like addition, subtraction, and element-wise multiplication on arrays of different sizes. It doesn't perform a dot product. Instead, it virtually stretches the smaller array to match the shape of the larger set, so the operation can be applied to the corresponding elements. 
+# """
 
-arr1 =np.array([[1,2,3,4]])
-arr2 = np.array([[1],[2],[3],[4]])
+# arr1 =np.array([[1,2,3,4]])
+# arr2 = np.array([[1],[2],[3],[4]])
 
-print(np.shape(arr1))
-print(np.shape(arr2))
+# print(np.shape(arr1))
+# print(np.shape(arr2))
 
-print(arr1 + arr2)
+# print(arr1 + arr2)
+
+
+array1 = np.array([[1,2,9,3,4,5,6,7,8]])
+array2 = np.array([[1],[2],[9],[3],[4],[5],[6],[7],[8]])
+
+print(np.shape(array1))
+print(np.shape(array2))
+
+print(array1 * array2)
+
+
