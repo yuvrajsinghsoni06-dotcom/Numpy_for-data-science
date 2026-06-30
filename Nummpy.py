@@ -113,8 +113,8 @@ import numpy as np
 # include axis arg to specfy the method call when 0 will applied to column , when 1 applied to rows.
 
 
-array = np.array([[1,2,3,4,5],
-                  [6,7,8,9,10]])
+# array = np.array([[1,2,3,4,5],
+#                   [6,7,8,9,10]])
 
 # print(np.sum(array))
 # print(np.mean(array))  # This is the mean of the array. 
@@ -127,4 +127,23 @@ array = np.array([[1,2,3,4,5],
 
 
 
-print(np.sum(array, axis =1))
+# print(np.sum(array, axis =1))
+
+
+# filtering
+
+
+ages = np.array([[18,21,43,34,56,23,32],
+                 [99,44,55,76,23,19,17]])
+
+adults = ages[(ages < 18) | (ages >= 45) ]
+senior = ages[ages >= 65]
+print(adults)
+print(senior)
+
+adultx = np.where(ages > 18 , ages, 00) # where function It uses three arguments:
+# 1. Condition
+# 2. Array we want the condition applied to
+# 3. Those data which are not matched as filtered will be replaced by the suggestive digit
+# It just retains the parent dimensions and returns filtered data in the parent dimension without flattening the data, which Boolean indexing does.
+print(adultx)
