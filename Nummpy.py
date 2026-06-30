@@ -163,6 +163,6 @@ import numpy as np
 # print(arr)
 
 rng = np.random.default_rng()
-fruits = np.array(["apple","orange","papaya","coconut"])
+fruits = np.array(["❤️","💀","💋","🍾"])
 fruits = rng.choice(fruits ,size= (2,2))
 print(fruits)
