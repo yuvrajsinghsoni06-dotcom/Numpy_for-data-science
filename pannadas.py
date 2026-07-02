@@ -162,6 +162,13 @@ df = pd.read_csv("pokemon.csv")
 
 # fix data types - data types can be fixed by converting the data types of the columns to the correct data types
 
-df["Legendary"] = df["Legendary"].astype(bool)
-print(df.to_string())
+# df["Legendary"] = df["Legendary"].astype(bool)
+# print(df.to_string())
 
+
+
+# to remove duplicate data - duplicate data can be removed by using the drop_duplicates() method
+
+
+df = df.drop_duplicates()
+print(df.to_string())
