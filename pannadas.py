@@ -105,7 +105,7 @@ series = pd.Series(data, index = ["a","b","c","d","e"])
   
 
   # applies to whole data frame
-df = pd.read_csv("pokemon.csv")
+# df = pd.read_csv("pokemon.csv")
 # print(df.mean(numeric_only= True))
 # print(df.sum(numeric_only= True))
 # print(df.min(numeric_only= True))
@@ -123,5 +123,45 @@ df = pd.read_csv("pokemon.csv")
 
 # groupby() - used to group data based on a column and then apply aggerate function on it
 
-group = df.groupby("Type1")
-print(group["Weight"].sum())
+# group = df.groupby("Type1")
+# print(group["Weight"].count())
+
+
+
+# data cleaning - process of removing or fixing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset
+
+df = pd.read_csv("pokemon.csv")
+
+# drop a column - removal of column 
+
+# df = df.drop(columns = ["Legendary", "Type2"])
+# print(df.to_string())
+
+
+# handle of missing data - missing data can be handled by either removing the rows or columns with missing data or by filling the missing data with a specific value
+
+# df = df.dropna(subset = ["Type2"])
+
+# df = df.fillna({"Type2": "None"})
+# print(df.to_string())
+
+
+
+# fix inconsistent values - inconsistent values can be fixed by replacing the incorrect values with the correct values
+
+# df["Type1"] = df["Type1"].replace({"Fire": "Flame",
+#                                     "Water": "Aqua",
+#                                     "Grass": "Leaf"})
+# print(df.to_string())
+
+
+# df["Name"] = df["Name"].str.upper()
+# print(df[df["Legendary"] == True].to_string())
+
+
+
+# fix data types - data types can be fixed by converting the data types of the columns to the correct data types
+
+df["Legendary"] = df["Legendary"].astype(bool)
+print(df.to_string())
+
