@@ -56,5 +56,35 @@ series = pd.Series(data, index = ["a","b","c","d","e"])
 # df = pd.read_csv("pokemon.csv")  # to read a csv file using pandas
 # print(df.to_string())
 
-df = pd.read_json("pokemon.json")
-print(df)
+# df = pd.read_json("pokemon.json")  # to read a json file using pandas
+# print(df)
+
+df = pd.read_csv("pokemon.csv" , index_col = "Name")
+
+
+# selection of column using column name
+
+# print(df["Name"].to_string())
+# print(df["Height"].to_string())
+# print(df["Weight"].to_string())
+
+# selection of multiple coljumn -
+# print(df[["Name", "Height", "Weight"]].to_string())
+
+
+# selction by Rows -
+# print(df.loc["Mewtwo"])
+
+# Notice the capital 'T', the space, and the capital 'H'
+# print(df.loc["Gastly":"Mewtwo", ["Weight", "Height"]])
+
+
+# print(df.iloc[0:11, 0:5])
+
+
+pokemon = input(f"Enter Pokemon Name: ")
+
+try:
+    print(df.loc[pokemon])
+except KeyError:
+    print(f"{pokemon} not found")
