@@ -82,9 +82,20 @@ df = pd.read_csv("pokemon.csv" , index_col = "Name")
 # print(df.iloc[0:11, 0:5])
 
 
-pokemon = input(f"Enter Pokemon Name: ")
+# pokemon = input(f"Enter Pokemon Name: ")
 
-try:
-    print(df.loc[pokemon])
-except KeyError:
-    print(f"{pokemon} not found")
+# try:
+#     print(df.loc[pokemon])
+# except KeyError:
+#     print(f"{pokemon} not found")
+
+
+# filtering
+
+# print(df[df["Height"] > 2.0])
+
+# legendery_pokemon = df[df["Legendary"] == True]
+# print(legendery_pokemon)
+
+water_pok = df[(df["Type1"] == "Water") & (df["Type2"] != "Water")]
+print(water_pok)
