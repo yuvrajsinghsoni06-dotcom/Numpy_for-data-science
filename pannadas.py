@@ -31,24 +31,30 @@ series = pd.Series(data, index = ["a","b","c","d","e"])
 
 # dataframe - It's a two-dimensional label data structure with columns and rows, similar to a spreadsheet or a SQL table. 
 
-data = {"Name": ["morphes", "john smith", "neo", "trinity"],
-        "Id" : [1,2,3,4] ,
-        "Salary" : [10000,20000,30000,10000]}
+# data = {"Name": ["morphes", "john smith", "neo", "trinity"],
+#         "Id" : [1,2,3,4] ,
+#         "Salary" : [10000,20000,30000,10000]}
 
-dataframe = pd.DataFrame(data, index = ["employee1", "employee2","employee3","employee4"])
-# print(dataframe.loc["employee3"])
+# dataframe = pd.DataFrame(data, index = ["employee1", "employee2","employee3","employee4"])
+# # print(dataframe.loc["employee3"])
 
 
 # print(dataframe.iloc[3])
 
-dataframe["Role"] = ["Cammander", "Agent" , "the Chosen One", "the baddie"]   #  Addition of new column in df
+# dataframe["Role"] = ["Cammander", "Agent" , "the Chosen One", "the baddie"]   #  Addition of new column in df
 
-# addition of new row in df - so we forst create a seperate dataframe and then concat it into exixting dataframe
-df_row = pd.DataFrame({"Name": "matrix", "Id" : 5, "Salary" : 50000,
-                       "Role" : "the world of illusion"}, index = ["employee5"])
-df_row1 = pd.DataFrame({"Name": "sexy red dress women", "Id" : 6, "Salary" : 50000,
-                       "Role" : "the hot latina"}, index = ["employee6"])
-df_row2 = pd.DataFrame({"Name": "rick", "Id" : 5, "Salary" : 50000,
-                       "Role" : "the crazy piece of shit"}, index = ["employee7"])
-dataframe = pd.concat([dataframe, df_row, df_row1, df_row2])
-print(dataframe)
+# # addition of new row in df - so we forst create a seperate dataframe and then concat it into exixting dataframe
+# df_row = pd.DataFrame({"Name": "matrix", "Id" : 5, "Salary" : 50000,
+#                        "Role" : "the world of illusion"}, index = ["employee5"])
+# df_row1 = pd.DataFrame({"Name": "sexy red dress women", "Id" : 6, "Salary" : 50000,
+#                        "Role" : "the hot latina"}, index = ["employee6"])
+# df_row2 = pd.DataFrame({"Name": "rick", "Id" : 5, "Salary" : 50000,
+#                        "Role" : "the crazy piece of shit"}, index = ["employee7"])
+# dataframe = pd.concat([dataframe, df_row, df_row1, df_row2])
+# print(dataframe)
+
+# df = pd.read_csv("pokemon.csv")  # to read a csv file using pandas
+# print(df.to_string())
+
+df = pd.read_json("pokemon.json")
+print(df)
