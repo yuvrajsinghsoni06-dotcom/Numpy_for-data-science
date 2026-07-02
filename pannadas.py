@@ -59,7 +59,7 @@ series = pd.Series(data, index = ["a","b","c","d","e"])
 # df = pd.read_json("pokemon.json")  # to read a json file using pandas
 # print(df)
 
-df = pd.read_csv("pokemon.csv" , index_col = "Name")
+# df = pd.read_csv("pokemon.csv" , index_col = "Name")
 
 
 # selection of column using column name
@@ -97,5 +97,31 @@ df = pd.read_csv("pokemon.csv" , index_col = "Name")
 # legendery_pokemon = df[df["Legendary"] == True]
 # print(legendery_pokemon)
 
-water_pok = df[(df["Type1"] == "Water") & (df["Type2"] != "Water")]
-print(water_pok)
+# water_pok = df[(df["Type1"] == "Water") & (df["Type2"] != "Water")]
+# print(water_pok)
+
+
+# Aggerate function - reduces the set of values into single summary value used to anlayse data
+  
+
+  # applies to whole data frame
+df = pd.read_csv("pokemon.csv")
+# print(df.mean(numeric_only= True))
+# print(df.sum(numeric_only= True))
+# print(df.min(numeric_only= True))
+# print(df.max(numeric_only= True))
+# print(df.count())
+
+
+# applies to a single column
+
+# print(df["Height"].mean())
+# print(df["Height"].sum())
+# print(df["Height"].min())
+# print(df["Height"].max())
+# print(df["Height"].count())
+
+# groupby() - used to group data based on a column and then apply aggerate function on it
+
+group = df.groupby("Type1")
+print(group["Weight"].sum())
